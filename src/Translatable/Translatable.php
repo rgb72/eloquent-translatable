@@ -19,7 +19,7 @@ trait Translatable {
     private $defaultTranslationSuffix = 'Translation';
     private $usePropertyFallback = true;
     private $useFallback = true;
-    private $fallbackLocale = getenv('th');
+    private $fallbackLocale = getenv('LANG_DEFAULT');
     private $toArrayAlwaysLoadsTranslations = true;
 
     /**
