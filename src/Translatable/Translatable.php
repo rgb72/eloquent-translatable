@@ -1,12 +1,12 @@
 <?php
 
-namespace Dimsav\Translatable;
+namespace Rgb72\Translatable;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Query\Builder as QueryBuilder;
-use Dimsav\Translatable\Exception\LocalesNotDefinedException;
+use Rgb72\Translatable\Exception\LocalesNotDefinedException;
 
 trait Translatable {
 
