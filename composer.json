@@ -17,6 +17,5 @@
             "Rgb72\\Translatable\\": "src/Translatable/"
         }
     },
-
-    "minimum-stability": "dev"
+    "minimum-stability": "dev-master"
 }
