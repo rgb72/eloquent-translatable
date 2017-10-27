@@ -12,9 +12,6 @@
     "require": {
         "php": ">=5.4.0"
     },
-    "require-dev": {
-        "orchestra/testbench": "3.5.*"
-    },
     "autoload": {
         "psr-4": {
             "Rgb72\\Translatable\\": "src/Translatable/"
