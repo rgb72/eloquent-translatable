@@ -692,7 +692,7 @@ trait Translatable {
             return $this->defaultLocale;
         }
 
-        return $this-> ?: Singleton::getInstance()->getLocale();
+        return $this->locale ?: Singleton::getInstance()->getLocale();
     }
 
     /**
