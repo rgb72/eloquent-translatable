@@ -19,7 +19,7 @@ trait Translatable {
     private $defaultTranslationSuffix = 'Translation';
     private $usePropertyFallback = true;
     private $useFallback = true;
-    private $fallbackLocale = getenv('LANG_DEFAULT');
+    private $fallbackLocale = getenv('LANG_AVALIABLE');
     private $toArrayAlwaysLoadsTranslations = true;
 
     /**
@@ -373,8 +373,7 @@ trait Translatable {
         if(!is_array($localesConfig)) $localesConfig = array_map(explode(',', $localesConfig), 'trim');
 
         if (empty($localesConfig)) {
-            throw new LocalesNotDefinedException('Please make sure you have run "php artisan config:publish dimsav/laravel-translatable" '.
-                ' and that the locales configuration is defined.');
+            throw new LocalesNotDefinedException('Please make sure you put LANG_AVALIABLE in .env');
         }
 
         $locales = [];
