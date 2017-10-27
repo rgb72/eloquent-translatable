@@ -13,13 +13,13 @@ trait Translatable {
     protected $defaultLocale;
 
     private $locale = null;
-    private $locales = ['en','fr'];
+    private $locales = getenv('LANG_AVALIABLE');
     private $localeSeparator = '-';
     private $defaultLocaleKey = 'locale';
     private $defaultTranslationSuffix = 'Translation';
     private $usePropertyFallback = true;
     private $useFallback = true;
-    private $fallbackLocale = 'en';
+    private $fallbackLocale = getenv('th');
     private $toArrayAlwaysLoadsTranslations = true;
 
     /**
@@ -369,7 +369,8 @@ trait Translatable {
      * @return array
      */
     protected function getLocales() {
-        $localesConfig = (array) $this->locales;
+        $localesConfig = $this->locales;
+        if(!is_array($localesConfig)) $localesConfig = array_map(explode(',', $localesConfig), 'trim');
 
         if (empty($localesConfig)) {
             throw new LocalesNotDefinedException('Please make sure you have run "php artisan config:publish dimsav/laravel-translatable" '.
@@ -692,7 +693,7 @@ trait Translatable {
             return $this->defaultLocale;
         }
 
-        return $this->locale;
+        return $this-> ?: Singleton::getInstance()->getLocale();
     }
 
     /**
