@@ -1,35 +1,23 @@
 {
-    "name": "dimsav/laravel-translatable",
-    "description": "A Laravel package for multilingual models",
-    "keywords": ["laravel", "translation", "language", "database"],
+    "name": "rgb72/eloquent-translatable",
+    "description": "A multilingual models for standalone Eloquent",
     "license": "MIT",
     "authors": [
         {
-            "name": "Dimitrios Savvopoulos",
-            "email": "ds@dimsav.com",
-            "homepage": "http://dimsav.com"
+            "name": "rgb72 co., ltd.",
+            "email": "developer@rgb72.com",
+            "homepage": "http://rgb72.com"
         }
     ],
     "require": {
         "php": ">=5.4.0"
     },
     "require-dev": {
-        "orchestra/testbench": "3.5.*",
-        "phpunit/phpunit": "~6.0"
+        "orchestra/testbench": "3.5.*"
     },
     "autoload": {
         "psr-4": {
-            "Dimsav\\Translatable\\": "src/Translatable/"
-        },
-        "classmap": [
-            "tests"
-        ]
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Dimsav\\Translatable\\TranslatableServiceProvider"
-            ]
+            "Rgb72\\Translatable\\": "src/Translatable/"
         }
     },
 
